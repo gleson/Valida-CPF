@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Validador de CPF</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="p-5 bg-light rounded-3">
+        <div class="container-fluid my-4">
+          <h1 class="display-5 fw-bolder">Validador de CPF</h1>
+          <p class="fs-5">Através deste simples algoritmo, são utilizados diversos recursos e habilidades da linguagem Javascript.</p>
+        </div>
+    </div>
+    <div class="container formulario col-md-8 col-lg-6 mx-auto">
+        <p class="my-3">Este algorítimo utiliza regex, portanto, funcionará se você digitar apenas os números do CPF, ou o mesmo em meio a um bloco de texto, como por exemplo:<br> "Meu cpf é: 123.456.789-09!".</p>
+
+        <form>
+            <div class="row">
+                <div class="input-group mb-1">
+                    <span class="input-group-text" id="basic-addon1">CPF</span>
+                    <input type="text" name="cpf" class="form-control" placeholder="Digite o cpf para validação"
+                        aria-describedby="sizing-addon1" id="cpf_digitado">
+                    <button type="button" class="btn btn-info text-white" id="basic-addon2" onclick="validacao()">Validar !</button>
+                    </div>
+            </div>
+        </form>
+        <div class="row mx-1">
+            <div id="success" class="alert alert-success" style="display: none;" role="alert">
+                <strong>Oba!</strong> O CPF <span id="cpfSuccess"></span> é válido
+            </div>
+            <div id="error" class="alert alert-danger" style="display: none;" role="alert">
+                <strong>Ops!</strong> O CPF <span id="cpfError"></span> não é válido
+            </div> 
+        </div>
+    </div>
+    <p id="myText"></p>
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script> -->
+
+<script src="script.js"></script>
+
+</html>
